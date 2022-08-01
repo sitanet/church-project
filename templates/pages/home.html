@@ -1,1 +1,558 @@
-<h2>Hello, World</h2>
+{% extends 'base.html'%}
+<!-- Main header end -->
+{% block content %}
+
+{% load static %}
+<!-- Banner start -->
+<div class="banner" id="banner">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner banner-slider-inner text-center">
+            <div class="carousel-item banner-max-height active item-bg">
+                <img class="d-block w-100 h-100" src="{% static 'img/dimeji.jpg'%}" alt="banner">
+                <div class="carousel-content container banner-info-2 bi-2 text-left">
+                    <h3>MEAL OF LIFE</h3>
+                    <h5>The first meal we serve you is Christ before other <br>meal for the peace that abide</h5>
+                    <a href="{% url 'streaming'%}" class="btn btn-lg btn-theme">Live Stream</a>
+                </div>
+            </div>
+            <div class="carousel-item banner-max-height item-bg">
+                <img class="d-block w-100 h-100" src="{% static 'img/ifeoluwa.jpg'%}" alt="banner">
+                <div class="carousel-content container banner-info-2 bi-2 text-left">
+                    <h3>Our profession </h3>
+                    <h5>is to learn Christ to reveal him as a life for the admission into the <br>community of the father</h5>
+                    <a href="#" class="btn btn-lg btn-theme">Read more</a>
+                </div>
+            </div>
+            <div class="carousel-item banner-max-height item-bg">
+                <img class="d-block w-100 h-100" src="{% static 'img/bumilayo.jpg'%}" alt="banner">
+                <div class="carousel-content container banner-info-2 bi-2 text-left">
+                    <h3>Ready to Journey with Christ?</h3>
+                    <h5>Our Labour is the obedience we engaged daily to overcome the dragon <br>to sit on the throne</h5>
+                    <a href="#" class="btn btn-lg btn-theme">Read more</a>
+                </div>
+            </div>
+        </div>
+        <!-- Search box 3 start -->
+
+        <!-- Search box 3 end -->
+        <a class="carousel-control-prev none-580" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="slider-mover-left" aria-hidden="true">
+                <i class="fa fa-angle-left"></i>
+            </span>
+        </a>
+        <a class="carousel-control-next none-580" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="slider-mover-right" aria-hidden="true">
+                <i class="fa fa-angle-right"></i>
+            </span>
+        </a>
+    </div>
+</div>
+<!-- Banner end -->
+
+
+
+<!-- Search box 2 end -->
+
+<!-- Featured car start -->
+
+
+<section class="about_wrapper">
+  <div class="container">
+    <div class="inner">
+      <div class="image">
+        <div class="img_inner">
+          <div class="img2">
+            <img src="{% static 'img/pastor.png'%}" alt="">
+          </div>
+
+
+        </div>
+
+      </div>
+
+    
+      <div class="right_content">
+        <h1>God as plan for you!</h1>
+        <p>We are happy that you are finally here, it is the will of God that men grow up to Christ in all
+          things as they receive doses of the revelations of Christ. The mandate of the Church in this
+          season is to equip the saints with the knowledge of Christ, that they may grow up in
+          stature, not being toss around with doctrines, but fully established in the will of God for their lives.</p>
+        <p>Welcome once again, do check our media resources and subscribe on our media channels to
+          receive updates and download messages. </p>
+          <p class="pst_name">Dimeji Elugbadebo</p>
+          <p class="pst_title">Senior Pastor TCGC</p>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+<!-- Sub Banner end -->
+
+<!-- Services start -->
+<div class="services content-area">
+    <div class="container">
+        <!-- Main title -->
+        <div class="main-title text-center">
+            <h1>Our <span>Profession</span></h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="service-info">
+                    <div class="number">1</div>
+                    <div class="icon">
+                        <i class="flaticon-support-2"></i>
+                    </div>
+                    <div class="detail">
+                        <h3>Faith</h3>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="service-info">
+                    <div class="number">2</div>
+                    <div class="icon">
+                        <i class="flaticon-speed"></i>
+                    </div>
+                    <div class="detail">
+                        <h3>Hope</h3>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="service-info">
+                    <div class="number">3</div>
+                    <div class="icon">
+                        <i class="flaticon-motor"></i>
+                    </div>
+                    <div class="detail">
+                        <h3>Charity</h3>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+</div>
+
+
+<!-- Featured car end -->
+
+<!-- Rent car start -->
+<div class="featured-car content-area">
+    <div class="container">
+        <!-- Main title -->
+        <div class="main-title">
+            <h1>Transcript <span>Messages</span></h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 col-md-6">
+              <div class="car-box-3">
+                  <div class="car-thumbnail">
+                      <a href="car-details.html" class="car-img">
+                          <div class="tag">New</div>
+                          <div class="price-box">
+                              <span>TSC</span>
+                          </div>
+                          <img class="d-block w-100" src="{% static 'img/dimeji.jpg'%}" alt="car">
+                      </a>
+                      <div class="carbox-overlap-wrapper">
+                          <div class="overlap-box">
+                              <div class="overlap-btns-area">
+                                  <div class="car-magnify-gallery">
+                                      <a href="{% static 'img/dimeji.jpg'%}" class="overlap-btn">
+                                          <i class="fa fa-expand"></i>
+                                          <img class="hidden" src="{% static 'img/dimeji.jpg'%}">
+                                      </a>
+                                      <a href="{% static 'img/ifeoluwa.jpg'%}" class="hidden" >
+                                          <img class="hidden" src="{% static 'img/ifeoluwa.jpg'%}">
+                                      </a>
+                                      <a href="{% static 'img/bumilayo.jpg'%}" class="hidden">
+                                          <img class="hidden" src="{% static 'img/bumilayo.jpg'%}">
+                                      </a>
+                                      <a href="{% static 'img/bread.jpg'%}" class="hidden">
+                                          <img class="hidden" src="{% static 'img/bread.jpg'%}">
+                                      </a>
+                                      <a href="{% static 'img/bumilayo.jpg'%}" class="hidden">
+                                          <img class="hidden" src="{% static 'img/bumilayo.jpg'%}">
+                                      </a>
+                                      <a href="{% static 'img/ifeoluwa.jpg'%}" class="hidden" >
+                                          <img class="hidden" src="{% static 'img/ifeoluwa.jpg'%}">
+                                      </a>
+                                      <a href="{% static 'img/bumilayo.jpg'%}" class="hidden">
+                                          <img class="hidden" src="{% static 'img/bumilayo.jpg'%}">
+                                      </a>
+                                      <a href="{% static 'img/bread.jpg'%}" class="hidden">
+                                          <img class="hidden" src="{% static 'img/bread.jpg'%}">
+                                      </a>
+                                      <a href="{% static 'img/bumilayo.jpg'%}" class="hidden">
+                                          <img class="hidden" src="{% static 'img/bumilayo.jpg'%}">
+                                      </a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="detail">
+                      <h1 class="title">
+                          <a href="car-details.html">Preparing The Bride Unto Eternal Reward Pt.5 | Pst. Dimeji Elugbadebo | TSC | 21-07-2022</a>
+                      </h1>
+                      <div class="location">
+                          <a href="car-details.html">
+                              <i class="flaticon-pin"></i>No 120 Ajibode Junction off UI Road Ojoo, Ibadan, Oyo State,
+                          </a>
+                      </div>
+                      <ul class="facilities-list clearfix">
+                          <li>Pst. Dimeji Elugbadebo</li>
+                          <li>Published july, 3 2022</li>
+                          <li>The School of Christ</li>
+
+                      </ul>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-6 col-md-6">
+              <div class="car-box-3">
+                  <div class="car-thumbnail">
+                      <a href="car-details.html" class="car-img">
+                          <div class="tag">New</div>
+                          <div class="price-box">
+                              <span>TSC</span>
+                          </div>
+                          <img class="d-block w-100" src="{% static 'img/dimeji.jpg'%}" alt="car">
+                      </a>
+                      <div class="carbox-overlap-wrapper">
+                          <div class="overlap-box">
+                              <div class="overlap-btns-area">
+                                  <div class="car-magnify-gallery">
+                                      <a href="{% static 'img/dimeji.jpg'%}" class="overlap-btn">
+                                          <i class="fa fa-expand"></i>
+                                          <img class="hidden" src="{% static 'img/dimeji.jpg'%}">
+                                      </a>
+                                      <a href="{% static 'img/ifeoluwa.jpg'%}" class="hidden" >
+                                          <img class="hidden" src="{% static 'img/ifeoluwa.jpg'%}">
+                                      </a>
+                                      <a href="{% static 'img/bumilayo.jpg'%}" class="hidden">
+                                          <img class="hidden" src="{% static 'img/bumilayo.jpg'%}">
+                                      </a>
+                                      <a href="{% static 'img/bread.jpg'%}" class="hidden">
+                                          <img class="hidden" src="{% static 'img/bread.jpg'%}">
+                                      </a>
+                                      <a href="{% static 'img/bumilayo.jpg'%}" class="hidden">
+                                          <img class="hidden" src="{% static 'img/bumilayo.jpg'%}">
+                                      </a>
+                                      <a href="{% static 'img/ifeoluwa.jpg'%}" class="hidden" >
+                                          <img class="hidden" src="{% static 'img/ifeoluwa.jpg'%}">
+                                      </a>
+                                      <a href="{% static 'img/bumilayo.jpg'%}" class="hidden">
+                                          <img class="hidden" src="{% static 'img/bumilayo.jpg'%}">
+                                      </a>
+                                      <a href="{% static 'img/bread.jpg'%}" class="hidden">
+                                          <img class="hidden" src="{% static 'img/bread.jpg'%}">
+                                      </a>
+                                      <a href="{% static 'img/bumilayo.jpg'%}" class="hidden">
+                                          <img class="hidden" src="{% static 'img/bumilayo.jpg'%}">
+                                      </a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="detail">
+                      <h1 class="title">
+                          <a href="car-details.html">Preparing The Bride Unto Eternal Reward Pt.5 | Pst. Dimeji Elugbadebo | TSC | 21-07-2022</a>
+                      </h1>
+                      <div class="location">
+                          <a href="car-details.html">
+                              <i class="flaticon-pin"></i>No 120 Ajibode Junction off UI Road Ojoo, Ibadan, Oyo State,
+                          </a>
+                      </div>
+                      <ul class="facilities-list clearfix">
+                          <li>Pst. Dimeji Elugbadebo</li>
+                          <li>Published july, 3 2022</li>
+                          <li>The School of Christ</li>
+
+                      </ul>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-6 col-md-6">
+              <div class="car-box-3">
+                  <div class="car-thumbnail">
+                      <a href="car-details.html" class="car-img">
+                          <div class="tag">New</div>
+                          <div class="price-box">
+                              <span>TSC</span>
+                          </div>
+                          <img class="d-block w-100" src="{% static 'img/dimeji.jpg'%}" alt="car">
+                      </a>
+                      <div class="carbox-overlap-wrapper">
+                          <div class="overlap-box">
+                              <div class="overlap-btns-area">
+                                  <div class="car-magnify-gallery">
+                                      <a href="{% static 'img/dimeji.jpg'%}" class="overlap-btn">
+                                          <i class="fa fa-expand"></i>
+                                          <img class="hidden" src="{% static 'img/dimeji.jpg'%}">
+                                      </a>
+                                      <a href="{% static 'img/ifeoluwa.jpg'%}" class="hidden" >
+                                          <img class="hidden" src="{% static 'img/ifeoluwa.jpg'%}">
+                                      </a>
+                                      <a href="{% static 'img/bumilayo.jpg'%}" class="hidden">
+                                          <img class="hidden" src="{% static 'img/bumilayo.jpg'%}">
+                                      </a>
+                                      <a href="{% static 'img/bread.jpg'%}" class="hidden">
+                                          <img class="hidden" src="{% static 'img/bread.jpg'%}">
+                                      </a>
+                                      <a href="{% static 'img/bumilayo.jpg'%}" class="hidden">
+                                          <img class="hidden" src="{% static 'img/bumilayo.jpg'%}">
+                                      </a>
+                                      <a href="{% static 'img/ifeoluwa.jpg'%}" class="hidden" >
+                                          <img class="hidden" src="{% static 'img/ifeoluwa.jpg'%}">
+                                      </a>
+                                      <a href="{% static 'img/bumilayo.jpg'%}" class="hidden">
+                                          <img class="hidden" src="{% static 'img/bumilayo.jpg'%}">
+                                      </a>
+                                      <a href="{% static 'img/bread.jpg'%}" class="hidden">
+                                          <img class="hidden" src="{% static 'img/bread.jpg'%}">
+                                      </a>
+                                      <a href="{% static 'img/bumilayo.jpg'%}" class="hidden">
+                                          <img class="hidden" src="{% static 'img/bumilayo.jpg'%}">
+                                      </a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="detail">
+                      <h1 class="title">
+                          <a href="car-details.html">Preparing The Bride Unto Eternal Reward Pt.5 | Pst. Dimeji Elugbadebo | TSC | 21-07-2022</a>
+                      </h1>
+                      <div class="location">
+                          <a href="car-details.html">
+                              <i class="flaticon-pin"></i>No 120 Ajibode Junction off UI Road Ojoo, Ibadan, Oyo State,
+                          </a>
+                      </div>
+                      <ul class="facilities-list clearfix">
+                          <li>Pst. Dimeji Elugbadebo</li>
+                          <li>Published july, 3 2022</li>
+                          <li>The School of Christ</li>
+
+                      </ul>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-6 col-md-6">
+              <div class="car-box-3">
+                  <div class="car-thumbnail">
+                      <a href="car-details.html" class="car-img">
+                          <div class="tag">New</div>
+                          <div class="price-box">
+                              <span>TSC</span>
+                          </div>
+                          <img class="d-block w-100" src="{% static 'img/dimeji.jpg'%}" alt="car">
+                      </a>
+                      <div class="carbox-overlap-wrapper">
+                          <div class="overlap-box">
+                              <div class="overlap-btns-area">
+                                  <div class="car-magnify-gallery">
+                                      <a href="{% static 'img/dimeji.jpg'%}" class="overlap-btn">
+                                          <i class="fa fa-expand"></i>
+                                          <img class="hidden" src="{% static 'img/dimeji.jpg'%}">
+                                      </a>
+                                      <a href="{% static 'img/ifeoluwa.jpg'%}" class="hidden" >
+                                          <img class="hidden" src="{% static 'img/ifeoluwa.jpg'%}">
+                                      </a>
+                                      <a href="{% static 'img/bumilayo.jpg'%}" class="hidden">
+                                          <img class="hidden" src="{% static 'img/bumilayo.jpg'%}">
+                                      </a>
+                                      <a href="{% static 'img/bread.jpg'%}" class="hidden">
+                                          <img class="hidden" src="{% static 'img/bread.jpg'%}">
+                                      </a>
+                                      <a href="{% static 'img/bumilayo.jpg'%}" class="hidden">
+                                          <img class="hidden" src="{% static 'img/bumilayo.jpg'%}">
+                                      </a>
+                                      <a href="{% static 'img/ifeoluwa.jpg'%}" class="hidden" >
+                                          <img class="hidden" src="{% static 'img/ifeoluwa.jpg'%}">
+                                      </a>
+                                      <a href="{% static 'img/bumilayo.jpg'%}" class="hidden">
+                                          <img class="hidden" src="{% static 'img/bumilayo.jpg'%}">
+                                      </a>
+                                      <a href="{% static 'img/bread.jpg'%}" class="hidden">
+                                          <img class="hidden" src="{% static 'img/bread.jpg'%}">
+                                      </a>
+                                      <a href="{% static 'img/bumilayo.jpg'%}" class="hidden">
+                                          <img class="hidden" src="{% static 'img/bumilayo.jpg'%}">
+                                      </a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="detail">
+                      <h1 class="title">
+                          <a href="car-details.html">Preparing The Bride Unto Eternal Reward Pt.5 | Pst. Dimeji Elugbadebo | TSC | 21-07-2022</a>
+                      </h1>
+                      <div class="location">
+                          <a href="car-details.html">
+                              <i class="flaticon-pin"></i>No 120 Ajibode Junction off UI Road Ojoo, Ibadan, Oyo State,
+                          </a>
+                      </div>
+                      <ul class="facilities-list clearfix">
+                          <li>Pst. Dimeji Elugbadebo</li>
+                          <li>Published july, 3 2022</li>
+                          <li>The School of Christ</li>
+
+                      </ul>
+                  </div>
+              </div>
+          </div>
+
+
+
+        </div>
+        <div class="slick-btn">
+            <div class="slick-prev slick-arrow-buton sab-4">
+                <i class="fa fa-angle-left"></i>
+            </div>
+            <div class="slick-next slick-arrow-buton sab-3">
+                <i class="fa fa-angle-right"></i>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Rent car end -->
+
+
+<!-- Our team start -->
+
+<!-- Our team end -->
+
+<!-- Intro section start -->
+<div class="intro-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 col-md-8 col-sm-12">
+                <div class="intro-text">
+                    <h3>Do You Have Questions ?</h3>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-12">
+                <a href="contact.html" class="btn btn-md">Get in Touch</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Intro section end -->
+
+<!-- Footer start -->
+
+<!-- Footer end -->
+
+<!-- Full Page Search -->
+<div id="full-page-search">
+    <button type="button" class="close">×</button>
+    <form action="https://storage.googleapis.com/theme-vessel/carhouse/index.html#" class="search-header">
+        <input type="search" value="" placeholder="type keyword(s) here. Eg: audi, benz etc" />
+        <button type="submit" class="btn btn-sm button-theme">Search</button>
+    </form>
+</div>
+
+<!-- Car Overview Modal -->
+<div class="car-model-2">
+    <div class="modal fade" id="carOverviewModal" tabindex="-1" role="dialog" aria-labelledby="carOverviewModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title" id="carOverviewModalLabel">
+                        <h4>Explore Your Dream Car</h4>
+                        <h5><i class="flaticon-pin"></i> 123 Kathal St. Tampa City,</h5>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row modal-raw">
+                        <div class="col-lg-6 modal-left">
+                            <div class="item active">
+                                <img src="{% static 'img/car-13.jpg' %}" alt="best-car" class="img-fluid modalLabel-1">
+                                <img src="{% static 'img/car-14.jpg' %}" alt="best-car" class="img-fluid modalLabel-2">
+                                <div class="sobuz">
+                                    <div class="price-box" style="padding-bottom: 5px;">
+                                        <span class="del-2">$1050.00</span>
+                                    </div>
+                                    <div class="">
+                                        <a href="car-details.html" class="btn btn-md btn-round btn-theme">Convertible</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 modal-right">
+                            <div class="modal-right-content">
+                                <section>
+                                    <h3>Features</h3>
+                                    <div class="features">
+                                        <ul class="bullets">
+                                            <li>Cruise Control</li>
+                                            <li>Airbags</li>
+                                            <li>Air Conditioning</li>
+                                            <li>Alarm System</li>
+                                            <li>Audio Interface</li>
+                                            <li>CDR Audio</li>
+                                            <li>Seat Heating</li>
+                                            <li>ParkAssist</li>
+                                        </ul>
+                                    </div>
+                                </section>
+                                <section>
+                                    <h3>Overview</h3>
+                                    <ul class="bullets">
+                                        <li>Model</li>
+                                        <li>Year</li>
+                                        <li>Condition</li>
+                                        <li>Price</li>
+                                        <li>Audi</li>
+                                        <li>2020</li>
+                                        <li>Brand New</li>
+                                        <li>$178,000</li>
+                                    </ul>
+                                </section>
+                                <div class="description">
+                                    <h3>Description</h3>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p>
+                                    <a href="car-details.html" class="btn btn-md btn-round btn-theme">Show Detail</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="full-page-search">
+    <button type="button" class="close">×</button>
+    <form action="https://storage.googleapis.com/theme-vessel/carhouse/index.html#" class="search-header">
+        <input type="search" value="" placeholder="type keyword(s) here. Eg: audi, benz etc" />
+        <button type="submit" class="btn btn-sm button-theme">Search</button>
+    </form>
+</div>
+
+{% endblock %}

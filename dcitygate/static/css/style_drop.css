@@ -1,0 +1,228 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+nav {
+  width: 100%;
+  height: 60px;
+  position: fixed;
+
+}
+
+
+nav ul {
+  float: left;
+  font-size: 12px;
+  font-weight: bold;
+  display:inline-block;
+  font-family:cursive;
+
+
+}
+
+nav ul li {
+  float: left;
+  list-style: none;
+  position: relative;
+}
+
+nav ul li a {
+  display: block;
+  font-family: arial;
+  color: #222;
+  font-weight: bold;
+  font-size:14px
+  padding: 24px 14px;
+
+}
+
+nav ul li ul {
+  display: none;
+  position: absolute;
+  background-color: #ffff;
+  color: #ffff
+
+  opacity: .4;
+  padding: 4px;
+  border-radius: 8px;
+}
+
+nav ul li:hover ul {
+  display: block;
+  color: #fff
+
+}
+
+nav ul li ul li a {
+  padding: 8px 10px;
+  border-radius: 0px, 0px, 4px, 4px;
+}
+
+nav ul li ul li {
+  width: 180px;
+  border-radius: 4px;
+}
+
+
+nav ul li ul li a:hover {
+  padding: 8px 10px;
+  background-color: #FFFFFF;
+  font-family: cursive;
+  font-size: 14px;
+  color: #ff0000;
+}
+
+.arrow {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+
+
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.pst_name{
+  text-align:left;
+
+
+
+}
+.pst_title{
+  text-align:left;
+  font-family:fantasy;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.5em;
+
+}
+
+.about_wrapper{
+  padding: 30px 0px;
+  background: #FF5F1F;
+  color: #ffff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+
+
+p{
+  color: #fff;
+  font-family: serif;
+
+}
+
+h1{
+  font-weight: bold;
+  text-transform: uppercase;
+
+}
+
+.container{
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0px 15px;
+}
+
+.about_wrapper .inner{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about_wrapper .inner .image{
+  flex: 0 0 40%;
+  max-width: 40%;
+  padding: 0px 10px
+}
+
+.about_wrapper .inner .right_content{
+  flex: 0 0 60%;
+  max-width: 60%;
+  padding: 0px 10px
+}
+
+.about_wrapper .inner .image img{
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about_wrapper .inner .right_content h2{
+  font-size: 40px;
+  margin-bottom: 20px;
+
+}
+
+.about_wrapper .inner .right_content p{
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 30px;
+}
+
+.about_wrapper .img_inner{
+  width: 300px;
+  height: 300px;
+  transform: translate(20%, 3%) rotate(45deg) ;
+  overflow: hidden;
+}
+
+.img2{
+  transform: scale(1.2) rotate(-35deg);
+}
+
+@media(max-width:991px){
+  .about_wrapper .img_inner{
+    width: 200px;
+    height: 200px;
+
+
+    transform: translate(2%, 3%) rotate(45deg);
+  }
+  .about_wrapper .inner .image{
+    flex:0 0 32%;
+    max-width: 32%;
+  }
+  .about_wrapper .inner .right_content{
+    flex:0 0 100%;
+    max-width: 68%;
+  }
+}
+
+@media(max-width:767px) {
+  .about_wrapper .inner .image, .about_wrapper .inner .right_content{
+    flex: 0 0 68%;
+    max-width: 100%;
+
+  }
+  .about_wrapper .inner .image{
+    margin-bottom: 40px;
+
+
+  }
+
+}
+
+.lead{
+  background-color: #835C3B;
+  min-height: 80vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.lead::after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-image: url(img/ifeoluwa.jpg);
+  height: 275px;
+}

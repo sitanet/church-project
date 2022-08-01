@@ -1,0 +1,24 @@
+{% extends 'base.html'%}
+<!-- Main header end -->
+{% block content %}
+
+{% load static %}
+
+<link rel="stylesheet" href="{% static '/css/style_imgc.css' %}">
+
+<div class="sub-banner overview-bgi">
+    <div class="container breadcrumb-area">
+        <div class="breadcrumb-areas">
+            <h1>Image and Glory Conference 2022</h1>
+            <ul class="breadcrumbs">
+                <li><a href="{% url 'home'%}">Home</a></li>
+                <li class="active">Image and Glory Conference</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock %}
