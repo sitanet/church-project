@@ -1,19 +1,26 @@
-{% extends 'base.html'%}
-<!-- Main header end -->
+{% extends 'base.html' %}
+
+
 {% block content %}
 
-<div class="sub-banner-kcc overview-bgi">
+<div class="sub-banner-blog overview-bgi">
     <div class="container breadcrumb-area">
         <div class="breadcrumb-areas">
-            <h1>Kingdom Community Center</h1>
+            <h1>The City Gate Blog</h1>
             <ul class="breadcrumbs">
                 <li><a href="{% url 'home'%}">Home</a></li>
-                <li class="active">Kingdom Community Center</li>
+                <li class="active">Blog</li>
             </ul>
         </div>
     </div>
 </div>
 
+
+
+
+
+
+<!-- Featured Blog start -->
 <div class="featured-car content-area">
     <div class="container">
         <div class="row">
@@ -29,7 +36,7 @@
                                     <div class="price-box">
                                         <span>{{blog.category}}</span>
                                     </div>
-                                    <img class="d-block w-100" src="{{blog.blog_photo_1.url}}" alt="car" style="min-height: 200px; max-height: 200px;>
+                                    <img class="d-block w-100" src="{{blog.blog_photo_1.url}}" alt="car" style="min-height: 200px; max-height: 200px;">
                                 </a>
                                 <div class="carbox-overlap-wrapper">
                                     <div class="overlap-box">
@@ -117,4 +124,4 @@
 </div>
 <!-- Featured Blog end -->
 
-{% endblock %}
+{% endblock%}

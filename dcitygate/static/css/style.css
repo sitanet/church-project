@@ -1,6 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
 html, body {
     height: 100%;
     font-family: 'Open Sans', sans-serif;
+
+}
+.bibb
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+ }
+
+.container-1
+{
+ position: relative;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-wrap: wrap;
+}
+
+
+.container-1 .hexagon
+{
+ position: relative;
+ width: 330px;
+ height: 330px;
+ margin:  30px 20px 70px;
+}
+
+
+
+.container-1 .hexagon::hover::before
+{
+  opacity:  0.8;
+}
+
+.container-1 .hexagon .shape
+{
+  position: absolute;
+  top: 0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
+}
+
+.container-1 .hexagon:hover .shape
+{
+  transform:  translateY(-30px);
+}
+
+.container-1 .hexagon .shape img
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.container-1 .hexagon .shape .content-1
+{
+  position:  absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  background: linear-gradient(45deg,#03a9f4,rgba(3, 169, 244, 0.5));
+  color: #fff;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.container-1 .hexagon:hover .shape .content-1
+{
+  opacity: 1;
+
 }
 
 a {
@@ -6079,22 +6173,93 @@ footer {
 }
 
 .sub-banner-audio {
-    background: rgba(0, 0, 0, 0.04) url(../img/car-2.jpg) top left repeat;
-    background-size: cover;
-    width: 100%;
-    min-height: 100vh;
-    float: left;
-    clear: both;
-    padding: 200px 200px;
-    background-position: center;
-    background-attachment: fixed;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 50% 100%, 0% 80%);
+  background: rgba(0, 0, 0, 0.04) url(../img/dimeji.jpg) top left repeat;
+  background-size: cover;
+  height: 360px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+
+
+}
+.sub-banner-blog {
+  background: rgba(0, 0, 0, 0.04) url(../img/dimeji.jpg) top left repeat;
+  background-size: cover;
+  height: 360px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+
+
+}
+
+.sub-banner-wap {
+  background: rgba(0, 0, 0, 0.04) url(../img/dimeji.jpg) top left repeat;
+  background-size: cover;
+  height: 360px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+
+
+}
+
+.sub-banner-tsc {
+  background: rgba(0, 0, 0, 0.04) url(../img/dimeji.jpg) top left repeat;
+  background-size: cover;
+  height: 360px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+
+
+}
+
+.sub-banner-imgc {
+  background: rgba(0, 0, 0, 0.04) url(../img/dimeji.jpg) top left repeat;
+  background-size: cover;
+  height: 360px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+
 
 }
 
 
+.sub-banner-kcc {
+  background: rgba(0, 0, 0, 0.04) url(../img/dimeji.jpg) top left repeat;
+  background-size: cover;
+  height: 360px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+
+
+}
+
 
 .sub-banner .breadcrumb-area {
+    letter-spacing: 1px;
+    position: absolute;
+    top: 55%;
+    right: 0;
+    opacity: 0.9;
+    left: 0;
+}
+.sub-banner-kcc .breadcrumb-area {
     letter-spacing: 1px;
     position: absolute;
     top: 55%;
@@ -6124,7 +6289,24 @@ footer {
     text-transform: uppercase;
 }
 
+.sub-banner-kcc .breadcrumb-area h1 {
+    margin: 0 0 7px;
+    font-weight: 500;
+    color: #fff;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
 .sub-banner .breadcrumbs li {
+    display: inline-block;
+    list-style: none;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+.sub-banner-kcc .breadcrumbs li {
     display: inline-block;
     list-style: none;
     font-size: 16px;
@@ -6145,11 +6327,20 @@ footer {
     color: #fff;
 }
 
+.sub-banner-kcc .breadcrumbs li a{
+    color: #fff;
+}
+
 .sub-banner-audio .breadcrumbs li a{
     color: #fff;
 }
 
 .sub-banner .breadcrumbs .active {
+    margin-left: 3px;
+    color: #fff;
+}
+
+.sub-banner-kcc .breadcrumbs .active {
     margin-left: 3px;
     color: #fff;
 }
@@ -6160,6 +6351,14 @@ footer {
 }
 
 .sub-banner .breadcrumbs .active:before {
+    margin-right: 7px;
+    content: "/";
+    padding: 0 3px;
+    color: #fff;
+    font: normal normal normal 16px/1 FontAwesome;
+}
+
+.sub-banner-kcc .breadcrumbs .active:before {
     margin-right: 7px;
     content: "/";
     padding: 0 3px;

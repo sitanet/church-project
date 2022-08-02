@@ -2,7 +2,7 @@
 <!-- Main header end -->
 {% block content %}
 
-<div class="sub-banner overview-bgi">
+<div class="sub-banner-tsc overview-bgi">
     <div class="container breadcrumb-area">
         <div class="breadcrumb-areas">
             <h1>The School of Christ</h1>
@@ -13,5 +13,112 @@
         </div>
     </div>
 </div>
+
+
+<div class="featured-car content-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+
+                <div class="row">
+                  {% for blog in blog_data %}
+                    <div class="col-lg-4 col-md-6">
+                        <div class="car-box-3">
+                            <div class="car-thumbnail">
+                                <a href="car-details.html" class="car-img">
+
+                                    <div class="price-box">
+                                        <span>{{blog.category}}</span>
+                                    </div>
+                                    <img class="d-block w-100" src="{{blog.blog_photo_1.url}}" alt="car" style="min-height: 200px; max-height: 200px;"">
+                                </a>
+                                <div class="carbox-overlap-wrapper">
+                                    <div class="overlap-box">
+                                        <div class="overlap-btns-area">
+                                            <div class="car-magnify-gallery">
+                                                <a href="{{blog.blog_photo_1.url}}" class="overlap-btn">
+                                                    <i class="fa fa-expand"></i>
+                                                    <img class="hidden" src="{{blog.blog_photo_1.url}}">
+                                                </a>
+                                                <a href="{{blog.blog_photo_2.url}}" class="hidden" >
+                                                    <img class="hidden" src="{{blog.blog_photo_2.url}}">
+                                                </a>
+                                                <a href="{{blog.blog_photo_3.url}}" class="hidden">
+                                                    <img class="hidden" src="{{blog.blog_photo_3.url}}">
+                                                </a>
+                                                <a href="{{blog.blog_photo_4.url}}" class="hidden">
+                                                    <img class="hidden" src="{{blog.blog_photo_4.url}}">
+                                                </a>
+                                                <a href="{{blog.blog_photo_5.url}}" class="hidden" >
+                                                    <img class="hidden" src="{{blog.blog_photo_5.url}}">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="detail">
+                                <h1 class="title">
+                                    <a href="car-details.html">{{blog.blog_title}}</a>
+                                </h1>
+                                <div class="location">
+                                    <a href="car-details.html">
+                                        <i class="flaticon-pin"></i>{{blog.address_location}}
+                                    </a>
+                                </div>
+                                <ul class="facilities-list clearfix">
+                                  <li>{{blog.minister_name}}</li>
+                                  <li>Published {{blog.created_date}}</li>
+                                  <li>{{blog.category}}</li>
+                                </ul>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    {% endfor%}
+
+
+
+
+
+
+
+
+                </div>
+                <!-- Page navigation start -->
+                <div class="pagination-box p-box-2 text-center">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item">
+                                <a class="page-link" href="#"><i class="fa fa-angle-left"></i></a>
+                            </li>
+                            <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#"><i class="fa fa-angle-right"></i></a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <div class="sidebar-right">
+                    <!-- Advanced search start -->
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Featured Blog end -->
 
 {% endblock %}

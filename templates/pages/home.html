@@ -1,5 +1,6 @@
 {% extends 'base.html'%}
 <!-- Main header end -->
+
 {% block content %}
 
 {% load static %}
@@ -13,6 +14,7 @@
                     <h3>MEAL OF LIFE</h3>
                     <h5>The first meal we serve you is Christ before other <br>meal for the peace that abide</h5>
                     <a href="{% url 'streaming'%}" class="btn btn-lg btn-theme">Live Stream</a>
+
                 </div>
             </div>
             <div class="carousel-item banner-max-height item-bg">
@@ -20,7 +22,7 @@
                 <div class="carousel-content container banner-info-2 bi-2 text-left">
                     <h3>Our profession </h3>
                     <h5>is to learn Christ to reveal him as a life for the admission into the <br>community of the father</h5>
-                    <a href="#" class="btn btn-lg btn-theme">Read more</a>
+                    <a href="{% url 'streaming'%}" class="btn btn-lg btn-theme">Live Stream</a>
                 </div>
             </div>
             <div class="carousel-item banner-max-height item-bg">
@@ -28,7 +30,15 @@
                 <div class="carousel-content container banner-info-2 bi-2 text-left">
                     <h3>Ready to Journey with Christ?</h3>
                     <h5>Our Labour is the obedience we engaged daily to overcome the dragon <br>to sit on the throne</h5>
-                    <a href="#" class="btn btn-lg btn-theme">Read more</a>
+                    <a href="{% url 'streaming'%}" class="btn btn-lg btn-theme">Live Stream</a>
+                </div>
+            </div>
+            <div class="carousel-item banner-max-height item-bg">
+                <img class="d-block w-100 h-100" src="{% static 'img/bread.jpg'%}" alt="banner">
+                <div class="carousel-content container banner-info-2 bi-2 text-left">
+                    <h3>Ready to Journey with Christ?</h3>
+                    <h5>Our Labour is the obedience we engaged daily to overcome the dragon <br>to sit on the throne</h5>
+                    <a href="{% url 'streaming'%}" class="btn btn-lg btn-theme">Live Stream</a>
                 </div>
             </div>
         </div>
@@ -70,7 +80,7 @@
 
       </div>
 
-    
+
       <div class="right_content">
         <h1>God as plan for you!</h1>
         <p>We are happy that you are finally here, it is the will of God that men grow up to Christ in all
@@ -97,345 +107,159 @@
 <!-- Sub Banner end -->
 
 <!-- Services start -->
-<div class="services content-area">
-    <div class="container">
-        <!-- Main title -->
-        <div class="main-title text-center">
+<section class="about_wrapper2">
+  <div class="container">
+    <div class="inner">
+
+      <div class="main-title">
             <h1>Our <span>Profession</span></h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
-        </div>
-        <div class="row">
-            <div class="col-lg-4 col-md-6 col-sm-6">
-                <div class="service-info">
-                    <div class="number">1</div>
-                    <div class="icon">
-                        <i class="flaticon-support-2"></i>
-                    </div>
-                    <div class="detail">
-                        <h3>Faith</h3>
 
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6">
-                <div class="service-info">
-                    <div class="number">2</div>
-                    <div class="icon">
-                        <i class="flaticon-speed"></i>
-                    </div>
-                    <div class="detail">
-                        <h3>Hope</h3>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6">
-                <div class="service-info">
-                    <div class="number">3</div>
-                    <div class="icon">
-                        <i class="flaticon-motor"></i>
-                    </div>
-                    <div class="detail">
-                        <h3>Charity</h3>
-
-                    </div>
-                </div>
             </div>
 
 
 
+          <div class="container-1">
+         <div class="hexagon">
+
+              <div class="shape">
+                  <img src="{% static 'img/faith.jpg'%}">
+                  <div class="content-1">
+                    <div >
+                        <h1>FAITH</h1>
+                        <p>“…Truly I tell you, if you have faith as small
+                          as a mustard seed, you can say to this mountain, ‘Move from here to there,’
+                          and it will move. Nothing will be impossible for you.” Matthew 17:20 </p>
 
 
+                        </div>
+                    </div>
+          </div>
+
+      </div>
+    <div class="hexagon">
+        <div class="shape">
+            <img src="{% static 'img/hope.jpg'%}">
+                <div class="content-1">
+                      <div >
+                        <h1>HOPE</h1>
+                        <p>“To them God has chosen to make known among the Gentiles the glorious riches of this mystery,
+                           which is Christ in you, the hope of glory.” – Colossians 1:27</p>
+
+                      </div>
+                  </div>
         </div>
     </div>
-</div>
+    <div class="hexagon">
+            <div class="shape">
+                <img src="{% static 'img/charity.jpg'%}">
+                    <div class="content-1">
+                      <div >
+                        <h1>CHARITY</h1>
+                        <p>Each one must give as he has decided in his heart, not reluctantly or under compulsion,
+                          for God loves a cheerful giver. – 2 Corinthians 9:7</p>
 
 
+                      </div>
+                  </div>
+            </div>
+    </div>
+        </div>
+        </div>
+  </div>
+
+
+</section>
 <!-- Featured car end -->
 
-<!-- Rent car start -->
-<div class="featured-car content-area">
+<div class="featured-car content-area-5">
     <div class="container">
         <!-- Main title -->
         <div class="main-title">
-            <h1>Transcript <span>Messages</span></h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-        <div class="row">
-          <div class="col-lg-6 col-md-6">
-              <div class="car-box-3">
-                  <div class="car-thumbnail">
-                      <a href="car-details.html" class="car-img">
-                          <div class="tag">New</div>
-                          <div class="price-box">
-                              <span>TSC</span>
-                          </div>
-                          <img class="d-block w-100" src="{% static 'img/dimeji.jpg'%}" alt="car">
-                      </a>
-                      <div class="carbox-overlap-wrapper">
-                          <div class="overlap-box">
-                              <div class="overlap-btns-area">
-                                  <div class="car-magnify-gallery">
-                                      <a href="{% static 'img/dimeji.jpg'%}" class="overlap-btn">
-                                          <i class="fa fa-expand"></i>
-                                          <img class="hidden" src="{% static 'img/dimeji.jpg'%}">
-                                      </a>
-                                      <a href="{% static 'img/ifeoluwa.jpg'%}" class="hidden" >
-                                          <img class="hidden" src="{% static 'img/ifeoluwa.jpg'%}">
-                                      </a>
-                                      <a href="{% static 'img/bumilayo.jpg'%}" class="hidden">
-                                          <img class="hidden" src="{% static 'img/bumilayo.jpg'%}">
-                                      </a>
-                                      <a href="{% static 'img/bread.jpg'%}" class="hidden">
-                                          <img class="hidden" src="{% static 'img/bread.jpg'%}">
-                                      </a>
-                                      <a href="{% static 'img/bumilayo.jpg'%}" class="hidden">
-                                          <img class="hidden" src="{% static 'img/bumilayo.jpg'%}">
-                                      </a>
-                                      <a href="{% static 'img/ifeoluwa.jpg'%}" class="hidden" >
-                                          <img class="hidden" src="{% static 'img/ifeoluwa.jpg'%}">
-                                      </a>
-                                      <a href="{% static 'img/bumilayo.jpg'%}" class="hidden">
-                                          <img class="hidden" src="{% static 'img/bumilayo.jpg'%}">
-                                      </a>
-                                      <a href="{% static 'img/bread.jpg'%}" class="hidden">
-                                          <img class="hidden" src="{% static 'img/bread.jpg'%}">
-                                      </a>
-                                      <a href="{% static 'img/bumilayo.jpg'%}" class="hidden">
-                                          <img class="hidden" src="{% static 'img/bumilayo.jpg'%}">
-                                      </a>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="detail">
-                      <h1 class="title">
-                          <a href="car-details.html">Preparing The Bride Unto Eternal Reward Pt.5 | Pst. Dimeji Elugbadebo | TSC | 21-07-2022</a>
-                      </h1>
-                      <div class="location">
-                          <a href="car-details.html">
-                              <i class="flaticon-pin"></i>No 120 Ajibode Junction off UI Road Ojoo, Ibadan, Oyo State,
-                          </a>
-                      </div>
-                      <ul class="facilities-list clearfix">
-                          <li>Pst. Dimeji Elugbadebo</li>
-                          <li>Published july, 3 2022</li>
-                          <li>The School of Christ</li>
-
-                      </ul>
-                  </div>
-              </div>
-          </div>
-          <div class="col-lg-6 col-md-6">
-              <div class="car-box-3">
-                  <div class="car-thumbnail">
-                      <a href="car-details.html" class="car-img">
-                          <div class="tag">New</div>
-                          <div class="price-box">
-                              <span>TSC</span>
-                          </div>
-                          <img class="d-block w-100" src="{% static 'img/dimeji.jpg'%}" alt="car">
-                      </a>
-                      <div class="carbox-overlap-wrapper">
-                          <div class="overlap-box">
-                              <div class="overlap-btns-area">
-                                  <div class="car-magnify-gallery">
-                                      <a href="{% static 'img/dimeji.jpg'%}" class="overlap-btn">
-                                          <i class="fa fa-expand"></i>
-                                          <img class="hidden" src="{% static 'img/dimeji.jpg'%}">
-                                      </a>
-                                      <a href="{% static 'img/ifeoluwa.jpg'%}" class="hidden" >
-                                          <img class="hidden" src="{% static 'img/ifeoluwa.jpg'%}">
-                                      </a>
-                                      <a href="{% static 'img/bumilayo.jpg'%}" class="hidden">
-                                          <img class="hidden" src="{% static 'img/bumilayo.jpg'%}">
-                                      </a>
-                                      <a href="{% static 'img/bread.jpg'%}" class="hidden">
-                                          <img class="hidden" src="{% static 'img/bread.jpg'%}">
-                                      </a>
-                                      <a href="{% static 'img/bumilayo.jpg'%}" class="hidden">
-                                          <img class="hidden" src="{% static 'img/bumilayo.jpg'%}">
-                                      </a>
-                                      <a href="{% static 'img/ifeoluwa.jpg'%}" class="hidden" >
-                                          <img class="hidden" src="{% static 'img/ifeoluwa.jpg'%}">
-                                      </a>
-                                      <a href="{% static 'img/bumilayo.jpg'%}" class="hidden">
-                                          <img class="hidden" src="{% static 'img/bumilayo.jpg'%}">
-                                      </a>
-                                      <a href="{% static 'img/bread.jpg'%}" class="hidden">
-                                          <img class="hidden" src="{% static 'img/bread.jpg'%}">
-                                      </a>
-                                      <a href="{% static 'img/bumilayo.jpg'%}" class="hidden">
-                                          <img class="hidden" src="{% static 'img/bumilayo.jpg'%}">
-                                      </a>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="detail">
-                      <h1 class="title">
-                          <a href="car-details.html">Preparing The Bride Unto Eternal Reward Pt.5 | Pst. Dimeji Elugbadebo | TSC | 21-07-2022</a>
-                      </h1>
-                      <div class="location">
-                          <a href="car-details.html">
-                              <i class="flaticon-pin"></i>No 120 Ajibode Junction off UI Road Ojoo, Ibadan, Oyo State,
-                          </a>
-                      </div>
-                      <ul class="facilities-list clearfix">
-                          <li>Pst. Dimeji Elugbadebo</li>
-                          <li>Published july, 3 2022</li>
-                          <li>The School of Christ</li>
-
-                      </ul>
-                  </div>
-              </div>
-          </div>
-          <div class="col-lg-6 col-md-6">
-              <div class="car-box-3">
-                  <div class="car-thumbnail">
-                      <a href="car-details.html" class="car-img">
-                          <div class="tag">New</div>
-                          <div class="price-box">
-                              <span>TSC</span>
-                          </div>
-                          <img class="d-block w-100" src="{% static 'img/dimeji.jpg'%}" alt="car">
-                      </a>
-                      <div class="carbox-overlap-wrapper">
-                          <div class="overlap-box">
-                              <div class="overlap-btns-area">
-                                  <div class="car-magnify-gallery">
-                                      <a href="{% static 'img/dimeji.jpg'%}" class="overlap-btn">
-                                          <i class="fa fa-expand"></i>
-                                          <img class="hidden" src="{% static 'img/dimeji.jpg'%}">
-                                      </a>
-                                      <a href="{% static 'img/ifeoluwa.jpg'%}" class="hidden" >
-                                          <img class="hidden" src="{% static 'img/ifeoluwa.jpg'%}">
-                                      </a>
-                                      <a href="{% static 'img/bumilayo.jpg'%}" class="hidden">
-                                          <img class="hidden" src="{% static 'img/bumilayo.jpg'%}">
-                                      </a>
-                                      <a href="{% static 'img/bread.jpg'%}" class="hidden">
-                                          <img class="hidden" src="{% static 'img/bread.jpg'%}">
-                                      </a>
-                                      <a href="{% static 'img/bumilayo.jpg'%}" class="hidden">
-                                          <img class="hidden" src="{% static 'img/bumilayo.jpg'%}">
-                                      </a>
-                                      <a href="{% static 'img/ifeoluwa.jpg'%}" class="hidden" >
-                                          <img class="hidden" src="{% static 'img/ifeoluwa.jpg'%}">
-                                      </a>
-                                      <a href="{% static 'img/bumilayo.jpg'%}" class="hidden">
-                                          <img class="hidden" src="{% static 'img/bumilayo.jpg'%}">
-                                      </a>
-                                      <a href="{% static 'img/bread.jpg'%}" class="hidden">
-                                          <img class="hidden" src="{% static 'img/bread.jpg'%}">
-                                      </a>
-                                      <a href="{% static 'img/bumilayo.jpg'%}" class="hidden">
-                                          <img class="hidden" src="{% static 'img/bumilayo.jpg'%}">
-                                      </a>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="detail">
-                      <h1 class="title">
-                          <a href="car-details.html">Preparing The Bride Unto Eternal Reward Pt.5 | Pst. Dimeji Elugbadebo | TSC | 21-07-2022</a>
-                      </h1>
-                      <div class="location">
-                          <a href="car-details.html">
-                              <i class="flaticon-pin"></i>No 120 Ajibode Junction off UI Road Ojoo, Ibadan, Oyo State,
-                          </a>
-                      </div>
-                      <ul class="facilities-list clearfix">
-                          <li>Pst. Dimeji Elugbadebo</li>
-                          <li>Published july, 3 2022</li>
-                          <li>The School of Christ</li>
-
-                      </ul>
-                  </div>
-              </div>
-          </div>
-          <div class="col-lg-6 col-md-6">
-              <div class="car-box-3">
-                  <div class="car-thumbnail">
-                      <a href="car-details.html" class="car-img">
-                          <div class="tag">New</div>
-                          <div class="price-box">
-                              <span>TSC</span>
-                          </div>
-                          <img class="d-block w-100" src="{% static 'img/dimeji.jpg'%}" alt="car">
-                      </a>
-                      <div class="carbox-overlap-wrapper">
-                          <div class="overlap-box">
-                              <div class="overlap-btns-area">
-                                  <div class="car-magnify-gallery">
-                                      <a href="{% static 'img/dimeji.jpg'%}" class="overlap-btn">
-                                          <i class="fa fa-expand"></i>
-                                          <img class="hidden" src="{% static 'img/dimeji.jpg'%}">
-                                      </a>
-                                      <a href="{% static 'img/ifeoluwa.jpg'%}" class="hidden" >
-                                          <img class="hidden" src="{% static 'img/ifeoluwa.jpg'%}">
-                                      </a>
-                                      <a href="{% static 'img/bumilayo.jpg'%}" class="hidden">
-                                          <img class="hidden" src="{% static 'img/bumilayo.jpg'%}">
-                                      </a>
-                                      <a href="{% static 'img/bread.jpg'%}" class="hidden">
-                                          <img class="hidden" src="{% static 'img/bread.jpg'%}">
-                                      </a>
-                                      <a href="{% static 'img/bumilayo.jpg'%}" class="hidden">
-                                          <img class="hidden" src="{% static 'img/bumilayo.jpg'%}">
-                                      </a>
-                                      <a href="{% static 'img/ifeoluwa.jpg'%}" class="hidden" >
-                                          <img class="hidden" src="{% static 'img/ifeoluwa.jpg'%}">
-                                      </a>
-                                      <a href="{% static 'img/bumilayo.jpg'%}" class="hidden">
-                                          <img class="hidden" src="{% static 'img/bumilayo.jpg'%}">
-                                      </a>
-                                      <a href="{% static 'img/bread.jpg'%}" class="hidden">
-                                          <img class="hidden" src="{% static 'img/bread.jpg'%}">
-                                      </a>
-                                      <a href="{% static 'img/bumilayo.jpg'%}" class="hidden">
-                                          <img class="hidden" src="{% static 'img/bumilayo.jpg'%}">
-                                      </a>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="detail">
-                      <h1 class="title">
-                          <a href="car-details.html">Preparing The Bride Unto Eternal Reward Pt.5 | Pst. Dimeji Elugbadebo | TSC | 21-07-2022</a>
-                      </h1>
-                      <div class="location">
-                          <a href="car-details.html">
-                              <i class="flaticon-pin"></i>No 120 Ajibode Junction off UI Road Ojoo, Ibadan, Oyo State,
-                          </a>
-                      </div>
-                      <ul class="facilities-list clearfix">
-                          <li>Pst. Dimeji Elugbadebo</li>
-                          <li>Published july, 3 2022</li>
-                          <li>The School of Christ</li>
-
-                      </ul>
-                  </div>
-              </div>
-          </div>
-
-
+            <h1>Latest <span>Messages</span></h1>
 
         </div>
-        <div class="slick-btn">
-            <div class="slick-prev slick-arrow-buton sab-4">
-                <i class="fa fa-angle-left"></i>
+        <!-- Slick slider area start -->
+
+        <div class="slick-slider-area clearfix">
+            <div class="row slick-carousel" data-slick='{"slidesToShow": 3, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 2}}, {"breakpoint": 768,"settings":{"slidesToShow": 1}}]}'>
+              {% for blog in blog_data %}
+                <div class="slick-slide-item">
+
+                    <div class="car-box-3">
+                        <div class="car-thumbnail">
+                            <a href="car-details.html" class="car-img">
+                                <div class="tag-2">Latest</div>
+                                <div class="price-box">
+                                    <span>{{blog.category}}</span>
+
+                                </div>
+                                <img class="d-block w-100" src="{{blog.blog_photo_1.url}}" alt="blog_photo_1" style="min-height: 200px; max-height: 200px;">
+                            </a>
+                            <div class="carbox-overlap-wrapper">
+                                <div class="overlap-box">
+                                    <div class="overlap-btns-area">
+                                        <div class="car-magnify-gallery">
+                                            <a href="img/car/car-1.jpg" class="overlap-btn">
+                                                <i class="fa fa-expand"></i>
+                                                <img class="hidden" src="img/car/car-1.jpg">
+                                            </a>
+                                            <a href="img/car/car-2.jpg" class="hidden">
+                                                <img class="hidden" src="img/car/car-2.jpg">
+                                            </a>
+                                            <a href="img/car/car-3.jpg" class="hidden">
+                                                <img class="hidden" src="img/car/car-3.jpg">
+                                            </a>
+                                            <a href="img/car/car-4.jpg" class="hidden">
+                                                <img class="hidden" src="img/car/car-4.jpg">
+                                            </a>
+                                            <a href="img/car/car-5.jpg" class="hidden">
+                                                <img class="hidden" src="img/car/car-5.jpg">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <h1 class="title">
+                                <a href="car-details.html">{{blog.blog_title}}</a>
+                            </h1>
+                            <div class="location">
+                                <a href="car-details.html">
+                                  <i class="flaticon-pin"></i>{{blog.address_location}}
+                                </a>
+                            </div>
+                            <ul class="facilities-list clearfix">
+                              <li>{{blog.minister_name}}</li><br>
+                              <li>Published {{blog.created_date}}</li><br>
+                              <li>{{blog.category}}</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+{% endfor%}
+
+
+
+
             </div>
-            <div class="slick-next slick-arrow-buton sab-3">
-                <i class="fa fa-angle-right"></i>
+            <div class="slick-btn">
+                <div class="slick-prev slick-arrow-buton sab-4">
+                    <i class="fa fa-angle-left"></i>
+                </div>
+                <div class="slick-next slick-arrow-buton sab-3">
+                    <i class="fa fa-angle-right"></i>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+
+<!-- Rent car start -->
+
+
 <!-- Rent car end -->
 
 
@@ -453,7 +277,7 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-4 col-sm-12">
-                <a href="contact.html" class="btn btn-md">Get in Touch</a>
+                <a href="{% url 'contact_us' %}" class="btn btn-md">Get in Touch</a>
             </div>
         </div>
     </div>

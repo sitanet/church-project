@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -105,7 +106,16 @@ nav ul li ul li a:hover {
 
 .about_wrapper{
   padding: 30px 0px;
-  background: #FF5F1F;
+  background: #E55B3C;
+  color: #ffff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.featured-car{
+  padding: 30px 0px;
+  background: #00A36C;
   color: #ffff;
   min-height: 100vh;
   display: flex;
@@ -113,10 +123,19 @@ nav ul li ul li a:hover {
 }
 
 
+.about_wrapper2{
+  padding: 30px 0px;
+
+  color: #ffff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
 
 p{
   color: #fff;
   font-family: serif;
+
 
 }
 

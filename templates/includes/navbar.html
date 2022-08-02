@@ -1,5 +1,5 @@
 {% load static %}
-
+<link rel="stylesheet" href="{% static '/css/style.css' %}">
 <link rel="stylesheet" href="{% static '/css/style_drop.css' %}">
 <header class="main-header sticky-header header-with-top">
     <div class="container">
@@ -13,12 +13,25 @@
             <div class="navbar-collapse collapse w-100" id="navbar">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link dropdown-toggle" href="{% url 'imgc'%}" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a
+
+                        {% if 'imgc' in request.path %}
+                        class="nav-link active"
+                        {% else %}
+                        class="nav-link"
+                        {% endif %}
+                         href="{% url 'imgc'%}" >
                             IMGC 2022
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'audio_messages'%}">
+                        <a
+                        {% if 'audio_msg' in request.path %}
+                        class="nav-link active"
+                        {% else %}
+                        class="nav-link"
+                        {% endif %}
+                         href="{% url 'audio_msg'%}" >
                           Audio Messages
                         </a>
                     </li>
@@ -30,7 +43,7 @@
                           <li><a href="{% url 'tsc'%}">THE SCHOOL OF CHRIST</a></li>
                           <li><a href="{% url 'word_prayer'%}">WORD AND PRAYER</a></li>
                           <li><a href="{% url 'video_messages'%}">VIDEO MESSAGES</a></li>
-                          <li><a href="{% url 'audio_messages'%}">AUDIO MESSAGES</a></li>
+                          <li><a href="{% url 'audio_msg'%}">AUDIO MESSAGES</a></li>
                           <li><a href="{% url 'kcc'%}">KINGDOM COMMUNITY CENTER</a></li>
                           <li><a href="{% url 'couple_meeting'%}">COUPLES MEETINGS</a></li>
 
@@ -38,7 +51,13 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'blog'%}">
+                        <a
+                        {% if 'blog' in request.path %}
+                        class="nav-link active"
+                        {% else %}
+                        class="nav-link"
+                        {% endif %}
+                         href="{% url 'blogs'%}">
                             Blog
                         </a>
                     </li>
@@ -46,7 +65,15 @@
 
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="{% url 'contact_us'%}">Contact</a>
+                        <a
+                        {% if 'contact_us' in request.path %}
+                        class="nav-link active"
+                        {% else %}
+                        class="nav-link"
+                        {% endif %}
+                         href="{% url 'contact_us' %}">
+                        Contact
+                      </a>
                     </li>
 
                 </ul>

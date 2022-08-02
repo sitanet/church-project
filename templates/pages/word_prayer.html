@@ -4,7 +4,7 @@
 
 {% load static %}
 
-<div class="sub-banner overview-bgi">
+<div class="sub-banner-wap overview-bgi">
     <div class="container breadcrumb-area">
         <div class="breadcrumb-areas">
             <h1>Word and Prayer</h1>
@@ -20,50 +20,39 @@
 <div class="featured-car content-area">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-md-12">
+            <div class="col-lg-12 col-md-12">
 
                 <div class="row">
-                    <div class="col-lg-6 col-md-6">
+                  {% for blog in blog_data %}
+                    <div class="col-lg-4 col-md-6">
                         <div class="car-box-3">
                             <div class="car-thumbnail">
                                 <a href="car-details.html" class="car-img">
-                                    <div class="tag">New</div>
+
                                     <div class="price-box">
-                                        <span>TSC</span>
+                                        <span>{{blog.category}}</span>
                                     </div>
-                                    <img class="d-block w-100" src="{% static 'img/dimeji.jpg'%}" alt="car">
+                                    <img class="d-block w-100" src="{{blog.blog_photo_1.url}}" alt="car" style="min-height: 200px; max-height: 200px;>
                                 </a>
                                 <div class="carbox-overlap-wrapper">
                                     <div class="overlap-box">
                                         <div class="overlap-btns-area">
                                             <div class="car-magnify-gallery">
-                                                <a href="{% static 'img/dimeji.jpg'%}" class="overlap-btn">
+                                                <a href="{{blog.blog_photo_1.url}}" class="overlap-btn">
                                                     <i class="fa fa-expand"></i>
-                                                    <img class="hidden" src="{% static 'img/dimeji.jpg'%}">
+                                                    <img class="hidden" src="{{blog.blog_photo_1.url}}">
                                                 </a>
-                                                <a href="{% static 'img/ifeoluwa.jpg'%}" class="hidden" >
-                                                    <img class="hidden" src="{% static 'img/ifeoluwa.jpg'%}">
+                                                <a href="{{blog.blog_photo_2.url}}" class="hidden" >
+                                                    <img class="hidden" src="{{blog.blog_photo_2.url}}">
                                                 </a>
-                                                <a href="{% static 'img/bumilayo.jpg'%}" class="hidden">
-                                                    <img class="hidden" src="{% static 'img/bumilayo.jpg'%}">
+                                                <a href="{{blog.blog_photo_3.url}}" class="hidden">
+                                                    <img class="hidden" src="{{blog.blog_photo_3.url}}">
                                                 </a>
-                                                <a href="{% static 'img/bread.jpg'%}" class="hidden">
-                                                    <img class="hidden" src="{% static 'img/bread.jpg'%}">
+                                                <a href="{{blog.blog_photo_4.url}}" class="hidden">
+                                                    <img class="hidden" src="{{blog.blog_photo_4.url}}">
                                                 </a>
-                                                <a href="{% static 'img/bumilayo.jpg'%}" class="hidden">
-                                                    <img class="hidden" src="{% static 'img/bumilayo.jpg'%}">
-                                                </a>
-                                                <a href="{% static 'img/ifeoluwa.jpg'%}" class="hidden" >
-                                                    <img class="hidden" src="{% static 'img/ifeoluwa.jpg'%}">
-                                                </a>
-                                                <a href="{% static 'img/bumilayo.jpg'%}" class="hidden">
-                                                    <img class="hidden" src="{% static 'img/bumilayo.jpg'%}">
-                                                </a>
-                                                <a href="{% static 'img/bread.jpg'%}" class="hidden">
-                                                    <img class="hidden" src="{% static 'img/bread.jpg'%}">
-                                                </a>
-                                                <a href="{% static 'img/bumilayo.jpg'%}" class="hidden">
-                                                    <img class="hidden" src="{% static 'img/bumilayo.jpg'%}">
+                                                <a href="{{blog.blog_photo_5.url}}" class="hidden" >
+                                                    <img class="hidden" src="{{blog.blog_photo_5.url}}">
                                                 </a>
                                             </div>
                                         </div>
@@ -72,183 +61,33 @@
                             </div>
                             <div class="detail">
                                 <h1 class="title">
-                                    <a href="car-details.html">Preparing The Bride Unto Eternal Reward Pt.5 | Pst. Dimeji Elugbadebo | TSC | 21-07-2022</a>
+                                    <a href="car-details.html">{{blog.blog_title}}</a>
                                 </h1>
                                 <div class="location">
                                     <a href="car-details.html">
-                                        <i class="flaticon-pin"></i>No 120 Ajibode Junction off UI Road Ojoo, Ibadan, Oyo State,
+                                        <i class="flaticon-pin"></i>{{blog.address_location}}
                                     </a>
                                 </div>
                                 <ul class="facilities-list clearfix">
-                                    <li>Pst. Dimeji Elugbadebo</li>
-                                    <li>Published july, 3 2022</li>
-                                    <li>The School of Christ</li>
-
+                                  <li>{{blog.minister_name}}</li>
+                                  <li>Published {{blog.created_date}}</li>
+                                  <li>{{blog.category}}</li>
                                 </ul>
                             </div>
+
+
                         </div>
+
+
                     </div>
+                    {% endfor%}
 
-                    <div class="col-lg-6 col-md-6">
-                        <div class="car-box-3">
-                            <div class="car-thumbnail">
-                                <a href="car-details.html" class="car-img">
-                                    <div class="tag">New</div>
-                                    <div class="price-box">
-                                        <span>TSC</span>
-                                    </div>
-                                    <img class="d-block w-100" src="{% static 'img/dimeji.jpg'%}" alt="car">
-                                </a>
-                                <div class="carbox-overlap-wrapper">
-                                    <div class="overlap-box">
-                                        <div class="overlap-btns-area">
-                                            <div class="car-magnify-gallery">
-                                                <a href="img/car/car-1.jpg" class="overlap-btn">
-                                                    <i class="fa fa-expand"></i>
-                                                    <img class="hidden" src="img/car/car-1.jpg">
-                                                </a>
-                                                <a href="img/car/car-2.jpg" class="hidden" >
-                                                    <img class="hidden" src="img/car/car-2.jpg">
-                                                </a>
-                                                <a href="img/car/car-3.jpg" class="hidden">
-                                                    <img class="hidden" src="img/car/car-3.jpg">
-                                                </a>
-                                                <a href="img/car/car-4.jpg" class="hidden">
-                                                    <img class="hidden" src="img/car/car-4.jpg">
-                                                </a>
-                                                <a href="img/car/car-5.jpg" class="hidden" >
-                                                    <img class="hidden" src="{% static ''%}">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="detail">
-                                <h1 class="title">
-                                    <a href="car-details.html">Preparing The Bride Unto Eternal Reward Pt.5 | Pst. Dimeji Elugbadebo | TSC | 21-07-2022</a>
-                                </h1>
-                                <div class="location">
-                                    <a href="car-details.html">
-                                        <i class="flaticon-pin"></i>No 120 Ajibode Junction off UI Road Ojoo, Ibadan, Oyo State,
-                                    </a>
-                                </div>
-                                <ul class="facilities-list clearfix">
-                                    <li>Pst. Dimeji Elugbadebo</li>
-                                    <li>Published july, 3 2022</li>
-                                    <li>The School of Christ</li>
 
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="col-lg-6 col-md-6">
-                        <div class="car-box-3">
-                            <div class="car-thumbnail">
-                                <a href="car-details.html" class="car-img">
-                                    <div class="tag">New</div>
-                                    <div class="price-box">
-                                        <span>WAP</span>
-                                    </div>
-                                    <img class="d-block w-100" src="{% static 'img/dimeji.jpg'%}" alt="car">
-                                </a>
-                                <div class="carbox-overlap-wrapper">
-                                    <div class="overlap-box">
-                                        <div class="overlap-btns-area">
-                                            <div class="car-magnify-gallery">
-                                                <a href="img/car/car-1.jpg" class="overlap-btn">
-                                                    <i class="fa fa-expand"></i>
-                                                    <img class="hidden" src="img/car/car-1.jpg">
-                                                </a>
-                                                <a href="img/car/car-2.jpg" class="hidden" >
-                                                    <img class="hidden" src="img/car/car-2.jpg">
-                                                </a>
-                                                <a href="img/car/car-3.jpg" class="hidden">
-                                                    <img class="hidden" src="img/car/car-3.jpg">
-                                                </a>
-                                                <a href="img/car/car-4.jpg" class="hidden">
-                                                    <img class="hidden" src="img/car/car-4.jpg">
-                                                </a>
-                                                <a href="img/car/car-5.jpg" class="hidden" >
-                                                    <img class="hidden" src="{% static ''%}">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="detail">
-                                <h1 class="title">
-                                    <a href="car-details.html">Becoming a Friend of God | Pst. Dimeji Elugbadebo | WAP | 19-07-22</a>
-                                </h1>
-                                <div class="location">
-                                    <a href="car-details.html">
-                                        <i class="flaticon-pin"></i>No 120 Ajibode Junction off UI Road Ojoo, Ibadan, Oyo State,
-                                    </a>
-                                </div>
-                                <ul class="facilities-list clearfix">
-                                    <li>Pst. Dimeji Elugbadebo</li>
-                                    <li>Published july, 3 2022</li>
-                                    <li>Word and Prayer</li>
 
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <div class="car-box-3">
-                            <div class="car-thumbnail">
-                                <a href="car-details.html" class="car-img">
-                                    <div class="tag">New</div>
-                                    <div class="price-box">
-                                        <span>BST</span>
-                                    </div>
-                                    <img class="d-block w-100" src="{% static 'img/dimeji.jpg'%}" alt="car">
-                                </a>
-                                <div class="carbox-overlap-wrapper">
-                                    <div class="overlap-box">
-                                        <div class="overlap-btns-area">
-                                            <div class="car-magnify-gallery">
-                                                <a href="img/car/car-1.jpg" class="overlap-btn">
-                                                    <i class="fa fa-expand"></i>
-                                                    <img class="hidden" src="img/car/car-1.jpg">
-                                                </a>
-                                                <a href="img/car/car-2.jpg" class="hidden" >
-                                                    <img class="hidden" src="img/car/car-2.jpg">
-                                                </a>
-                                                <a href="img/car/car-3.jpg" class="hidden">
-                                                    <img class="hidden" src="img/car/car-3.jpg">
-                                                </a>
-                                                <a href="img/car/car-4.jpg" class="hidden">
-                                                    <img class="hidden" src="img/car/car-4.jpg">
-                                                </a>
-                                                <a href="img/car/car-5.jpg" class="hidden" >
-                                                    <img class="hidden" src="{% static ''%}">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="detail">
-                                <h1 class="title">
-                                    <a href="car-details.html">Everlasting Righteousness</a>
-                                </h1>
-                                <div class="location">
-                                    <a href="car-details.html">
-                                        <i class="flaticon-pin"></i>No 120 Ajibode Junction off UI Road Ojoo, Ibadan, Oyo State,
-                                    </a>
-                                </div>
-                                <ul class="facilities-list clearfix">
-                                    <li>Pst. Dimeji Elugbadebo</li>
-                                    <li>Published july, 3 2022</li>
-                                    <li>The School of Christ</li>
 
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+
+
 
                 </div>
                 <!-- Page navigation start -->
@@ -271,87 +110,14 @@
             <div class="col-lg-4 col-md-12">
                 <div class="sidebar-right">
                     <!-- Advanced search start -->
-                    <div class="widget advanced-search2">
-                        <h3 class="sidebar-title">Search your desire car</h3>
-                        <form method="GET">
-                            <div class="form-group">
-                                <select class="selectpicker search-fields" name="brand">
-                                    <option>Brand</option>
-                                    <option>Any</option>
-                                    <option>New</option>
-                                    <option>Semi-New</option>
-                                    <option>Damaged</option>
-                                    <option>Used</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <select class="selectpicker search-fields" name="location">
-                                    <option>Location</option>
-                                    <option>United States</option>
-                                    <option>United Kingdom</option>
-                                    <option>American Samoa</option>
-                                    <option>Belgium</option>
-                                    <option>Cameroon</option>
-                                    <option>Canada</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <select class="selectpicker search-fields" name="year">
-                                    <option>Year</option>
-                                    <option>2016</option>
-                                    <option>2017</option>
-                                    <option>2018</option>
-                                    <option>2019</option>
-                                    <option>2020</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <select class="selectpicker search-fields" name="category">
-                                    <option>Category</option>
-                                    <option>Luxury Car</option>
-                                    <option>Pickup Truck</option>
-                                    <option>Minivan</option>
-                                    <option>Truck</option>
-                                    <option>Sports Car</option>
-                                    <option>Wagon</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <select class="selectpicker search-fields" name="transmission">
-                                    <option>Transmission</option>
-                                    <option>Automatic</option>
-                                    <option>Manual</option>
-                                    <option>Tiptronic</option>
-                                </select>
-                            </div>
-                            <div class="range-slider clearfix">
-                                <label>Price</label>
-                                <div data-min="0" data-max="150000"  data-min-name="min_price" data-max-name="max_price" data-unit="USD" class="range-slider-ui ui-slider" aria-disabled="false"></div>
-                                <div class="clearfix"></div>
-                            </div>
-                            <div class="form-group mb-0">
-                                <button class="search-button btn">Search</button>
-                            </div>
-                        </form>
-                    </div>
 
-                    <!-- Question start -->
-                    <div class="widget question widget-3">
-                        <h5 class="sidebar-title">Follow us</h5>
-                        <div class="social-list clearfix">
-                            <ul>
-                                <li><a href="#" class="facebook-bg"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#" class="google-bg"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="#" class="rss-bg"><i class="fa fa-rss"></i></a></li>
-                                <li><a href="#" class="linkedin-bg"><i class="fa fa-linkedin"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
+
+
                 </div>
             </div>
         </div>
     </div>
 </div>
+<!-- Featured Blog end -->
 
 {% endblock %}
