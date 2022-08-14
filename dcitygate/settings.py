@@ -142,4 +142,4 @@ MEDIA_URL = '/media/'
 
 #whitenoise settings
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
