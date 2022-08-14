@@ -5,7 +5,7 @@
 {% block content %}
 {% load static %}
 
-<div class="sub-banner-audio overview-bgi">
+<div class="sub-banner overview-bgi">
     <div class="container breadcrumb-area">
         <div class="breadcrumb-areas">
             <h1>Audio Messages</h1>
@@ -29,28 +29,25 @@
 
     <div class="container">
         <!-- Main title -->
-        <div class="main-title">
-            <h1>Transcript <span>Messages</span></h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
+
         <div class="row">
 
           {% for audio in audio_data %}
-          <div class="col-lg-6 col-md-6">
+          <div class="col-lg-4 col-md-4">
               <div class="car-box-3">
                   <div class="car-thumbnail">
                       <a href="car-details.html" class="car-img">
                           <div class="tag">New</div>
                           <div class="price-box">
-                              <span>TSC</span>
+                              <span>{{audio.category}}</span>
                           </div>
-                          <img class="d-block w-100" src="{% static 'img/dimeji.jpg'%}" alt="car">
+                          <img class="d-block w-100" src="{{audio.blog_photo_1.url}}" alt="car">
                       </a>
                       <div class="carbox-overlap-wrapper">
                           <div class="overlap-box">
                               <div class="overlap-btns-area">
                                   <div class="car-magnify-gallery">
-                                      <a href="{% static 'img/dimeji.jpg'%}" class="overlap-btn">
+                                      <a href="{{audio.blog_photo_1.url}}" class="overlap-btn">
                                           <i class="fa fa-expand"></i>
                                           <img class="hidden" src="{% static 'img/dimeji.jpg'%}">
                                       </a>
@@ -85,23 +82,40 @@
                   </div>
                   <div class="detail">
                       <h1 class="title">
-                          <a href="car-details.html">{{audio.msg_title}}</a>
+                          <a href="{% url 'audio_detail' audio.id %}">{{audio.msg_title}}</a>
                       </h1>
                       <div class="location">
                           <a href="car-details.html">
-                              <i class="flaticon-pin"></i>No 120 Ajibode Junction off UI Road Ojoo, Ibadan, Oyo State,
+
                           </a>
                       </div>
                       <ul class="facilities-list clearfix">
                           <li>{{audio.minister_name}}</li>
-                          <li>{{Published audio.created_date |date:"M d, Y" }}</li>
-                          <li>{{audio.msg_catgery}}</li>
+                          <li>{{audio.created_date|date:"M d, Y" }}</li>
+
 
                       </ul>
                   </div>
+
+
+
+                  <figure >
+
+  <audio controls
+      src="{{audio.msg_link}}" controls="download">
+          Your browser does not support the audio element.
+  </audio>
+  <a href="https://drive.google.com/uc?authuser=0&id={{audio.id_link}}&export=download"
+  class="btn btn-lg btn-theme">
+  Download
+ </a>
+</figure>
+
               </div>
-              <iframe src="{{audio.msg_link}}" width="640" height="480" allow="autoplay"></iframe>
+
           </div>
+
+
 
   {% endfor%}
 
@@ -109,14 +123,51 @@
 
 
         </div>
-        <div class="slick-btn">
-            <div class="slick-prev slick-arrow-buton sab-4">
-                <i class="fa fa-angle-left"></i>
-            </div>
-            <div class="slick-next slick-arrow-buton sab-3">
-                <i class="fa fa-angle-right"></i>
-            </div>
-        </div>
+       
+              <div class="pagination-box p-box-2 text-center">
+                 
+          
+
+                {% if audio_data.has_other_pages %}
+                    
+                        <ul class="pagination">
+                            {% if audio_data.has_previous %}
+                            <li class="page-item">
+                                <a class="page-link" href="?page={{audio_data.previous_page_number}}"><i class="fa fa-angle-left"></i></a>
+                            </li>
+                            {% else %}
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#"><i class="fa fa-angle-left"></i></a>
+                            </li>
+
+                             {% endif %}
+                             {% for i in audio_data.paginator.page_range %}
+                              {% if audio_data.number == i %}
+                            <li class="page-item"><a class="page-link active" href="#">{{i}}</a></li>
+                            {% else %}
+                            <li class="page-item"><a class="page-link" href="?page={{i}}">{{i}}</a></li>
+
+
+                            {% endif %}
+                            {% endfor %}
+                        
+                               {% if audio_data.has_next %}
+                            <li class="page-item">
+                                <a class="page-link" href="?page={{audio_data.next_page_number}}"><i class="fa fa-angle-right"></i></a>
+                            </li>
+                            {% else %}
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#"><i class="fa fa-angle-right"></i></a>
+                            </li>
+
+                             {% endif %}
+
+                        </ul>
+                    
+                {% endif %}
+                
+                  
+                </div>
     </div>
 </div>
 

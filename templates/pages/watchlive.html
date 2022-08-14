@@ -1,0 +1,50 @@
+{% extends 'base.html'%}
+<!-- Main header end -->
+{% block content %}
+
+<div class="sub-banner overview-bgi">
+    <div class="container breadcrumb-area">
+        <div class="breadcrumb-areas">
+            <h1>Watch Live</h1>
+            <ul class="breadcrumbs">
+                <li><a href="{% url 'home'%}">Home</a></li>
+                <li class="active">Live Video</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="services content-area">
+   <div class="main-title text-center">
+            <h1>Live <span>Video Broadcast</span></h1>
+
+        </div>
+    <div class="container">
+
+
+        <!-- Main title -->
+        <div class="live">
+
+
+        <iframe width="100%" height="480px" src="https://www.youtube.com/embed/live_stream?channel=UCCBbW2sdzT1ocV5YeNAhbqw"
+         frameborder="0" allow="accelerometer; autoplay;
+        clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div>
+            <small><a href="https://www.youtube.com/c/dcitygatechurch/live" style="color:#1a1a1a;text-align:left; font-family:Helvetica, sans-serif; font-size:11px;">Watch on Youtube</a></small>
+
+        </div>
+        </div>
+
+
+
+    </div>
+</div>
+
+
+
+
+
+{% endblock %}

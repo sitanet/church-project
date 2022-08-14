@@ -2,7 +2,7 @@
 <!-- Main header end -->
 {% block content %}
 
-<div class="sub-banner-tsc overview-bgi">
+<div class="sub-banner overview-bgi">
     <div class="container breadcrumb-area">
         <div class="breadcrumb-areas">
             <h1>The School of Christ</h1>
@@ -59,7 +59,7 @@
                             </div>
                             <div class="detail">
                                 <h1 class="title">
-                                    <a href="car-details.html">{{blog.blog_title}}</a>
+                                    <a href="{% url 'tsc_detail' blog.id %}">{{blog.blog_title}}</a>
                                 </h1>
                                 <div class="location">
                                     <a href="car-details.html">
@@ -68,8 +68,8 @@
                                 </div>
                                 <ul class="facilities-list clearfix">
                                   <li>{{blog.minister_name}}</li>
-                                  <li>Published {{blog.created_date}}</li>
-                                  <li>{{blog.category}}</li>
+                                  <li>{{blog.created_date|date:"M d, Y" }}</li>
+
                                 </ul>
                             </div>
 
@@ -92,20 +92,50 @@
 
                 </div>
                 <!-- Page navigation start -->
-                <div class="pagination-box p-box-2 text-center">
-                    <nav aria-label="Page navigation example">
+            
+              <div class="pagination-box p-box-2 text-center">
+                 
+          
+
+                {% if blog_data.has_other_pages %}
+                    
                         <ul class="pagination">
+                            {% if blog_data.has_previous %}
                             <li class="page-item">
+                                <a class="page-link" href="?page={{blog_data.previous_page_number}}"><i class="fa fa-angle-left"></i></a>
+                            </li>
+                            {% else %}
+                            <li class="page-item disabled">
                                 <a class="page-link" href="#"><i class="fa fa-angle-left"></i></a>
                             </li>
-                            <li class="page-item"><a class="page-link active" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+
+                             {% endif %}
+                             {% for i in blog_data.paginator.page_range %}
+                              {% if blog_data.number == i %}
+                            <li class="page-item"><a class="page-link active" href="#">{{i}}</a></li>
+                            {% else %}
+                            <li class="page-item"><a class="page-link" href="?page={{i}}">{{i}}</a></li>
+
+
+                            {% endif %}
+                            {% endfor %}
+                        
+                               {% if blog_data.has_next %}
                             <li class="page-item">
+                                <a class="page-link" href="?page={{blog_data.next_page_number}}"><i class="fa fa-angle-right"></i></a>
+                            </li>
+                            {% else %}
+                            <li class="page-item disabled">
                                 <a class="page-link" href="#"><i class="fa fa-angle-right"></i></a>
                             </li>
+
+                             {% endif %}
+
                         </ul>
-                    </nav>
+                    
+                {% endif %}
+                
+                  
                 </div>
             </div>
             <div class="col-lg-4 col-md-12">
@@ -120,5 +150,8 @@
     </div>
 </div>
 <!-- Featured Blog end -->
+
+
+
 
 {% endblock %}

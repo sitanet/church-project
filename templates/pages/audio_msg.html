@@ -82,7 +82,7 @@
                   </div>
                   <div class="detail">
                       <h1 class="title">
-                          <a href="car-details.html">{{audio.msg_title}}</a>
+                          <a href="{% url 'audio_streaming_detail' audio.id %}">{{audio.msg_title}}</a>
                       </h1>
                       <div class="location">
                           <a href="car-details.html">
@@ -91,8 +91,8 @@
                       </div>
                       <ul class="facilities-list clearfix">
                           <li>{{audio.minister_name}}</li>
-                          <li>Published {{audio.created_date}}</li>
-                          <li>{{audio.catgery}}</li>
+                          <li>{{audio.created_date|date:"M d, Y" }}</li>
+                          <li>{{audio.category}}</li>
 
                       </ul>
                   </div>

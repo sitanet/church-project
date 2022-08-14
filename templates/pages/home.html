@@ -17,6 +17,7 @@
 
                 </div>
             </div>
+      
             <div class="carousel-item banner-max-height item-bg">
                 <img class="d-block w-100 h-100" src="{% static 'img/ifeoluwa.jpg'%}" alt="banner">
                 <div class="carousel-content container banner-info-2 bi-2 text-left">
@@ -35,6 +36,14 @@
             </div>
             <div class="carousel-item banner-max-height item-bg">
                 <img class="d-block w-100 h-100" src="{% static 'img/bread.jpg'%}" alt="banner">
+                <div class="carousel-content container banner-info-2 bi-2 text-left">
+                    <h3>Ready to Journey with Christ?</h3>
+                    <h5>Our Labour is the obedience we engaged daily to overcome the dragon <br>to sit on the throne</h5>
+                    <a href="{% url 'streaming'%}" class="btn btn-lg btn-theme">Live Stream</a>
+                </div>
+            </div>
+            <div class="carousel-item banner-max-height item-bg">
+                <img class="d-block w-100 h-100" src="{% static 'img/oluwa.jpg'%}" alt="banner">
                 <div class="carousel-content container banner-info-2 bi-2 text-left">
                     <h3>Ready to Journey with Christ?</h3>
                     <h5>Our Labour is the obedience we engaged daily to overcome the dragon <br>to sit on the throne</h5>
@@ -72,23 +81,29 @@
       <div class="image">
         <div class="img_inner">
           <div class="img2">
-            <img src="{% static 'img/pastor.png'%}" alt="">
+            <img src="{% static 'img/pst&mrs.jpg'%}" alt="">
           </div>
 
 
         </div>
 
       </div>
-
+ 
 
       <div class="right_content">
+       
+        <div class=" pst_welcome">
+            <div class="pst_welcome_heading">
         <h1>God as plan for you!</h1>
+        </div>
         <p>We are happy that you are finally here, it is the will of God that men grow up to Christ in all
           things as they receive doses of the revelations of Christ. The mandate of the Church in this
           season is to equip the saints with the knowledge of Christ, that they may grow up in
           stature, not being toss around with doctrines, but fully established in the will of God for their lives.</p>
         <p>Welcome once again, do check our media resources and subscribe on our media channels to
           receive updates and download messages. </p>
+
+          </div>
           <p class="pst_name">Dimeji Elugbadebo</p>
           <p class="pst_title">Senior Pastor TCGC</p>
 
@@ -171,11 +186,11 @@
 </section>
 <!-- Featured car end -->
 
-<div class="featured-car content-area-5">
+<div class="featured-car2 content-area-5">
     <div class="container">
         <!-- Main title -->
         <div class="main-title">
-            <h1>Latest <span>Messages</span></h1>
+            <h1>Transcribed <span>Messages</span></h1>
 
         </div>
         <!-- Slick slider area start -->
@@ -187,7 +202,7 @@
 
                     <div class="car-box-3">
                         <div class="car-thumbnail">
-                            <a href="car-details.html" class="car-img">
+                            <a href="{% url 'blog_detail' blog.id %}" class="car-img">
                                 <div class="tag-2">Latest</div>
                                 <div class="price-box">
                                     <span>{{blog.category}}</span>
@@ -222,17 +237,17 @@
                         </div>
                         <div class="detail">
                             <h1 class="title">
-                                <a href="car-details.html">{{blog.blog_title}}</a>
+                                <a href="{% url 'blog_detail' blog.id %}">{{blog.blog_title}}</a>
                             </h1>
                             <div class="location">
-                                <a href="car-details.html">
+                                <a href="{% url 'blog_detail' blog.id %}">
                                   <i class="flaticon-pin"></i>{{blog.address_location}}
                                 </a>
                             </div>
                             <ul class="facilities-list clearfix">
-                              <li>{{blog.minister_name}}</li><br>
-                              <li>Published {{blog.created_date}}</li><br>
-                              <li>{{blog.category}}</li>
+                              <li>{{blog.minister_name}}</li>
+                              <li>{{blog.created_date|date:"M d, Y" }}</li>
+
                             </ul>
                         </div>
                     </div>
@@ -257,7 +272,108 @@
 </div>
 
 
-<!-- Rent car start -->
+
+
+<div class="featured-car content-area-5">
+    <div class="container">
+        <!-- Main title -->
+        <div class="main-title">
+            <h1>Audio <span>Messages</span></h1>
+
+        </div>
+        <!-- Slick slider area start -->
+
+        <div class="slick-slider-area clearfix">
+            <div class="row slick-carousel" data-slick='{"slidesToShow": 3, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 2}}, {"breakpoint": 768,"settings":{"slidesToShow": 1}}]}'>
+              {% for audio in audio_data %}
+                <div class="slick-slide-item">
+
+                    <div class="car-box-3">
+                        <div class="car-thumbnail">
+                            <a href="{% url 'audio_detail' audio.id %}" class="car-img">
+                                <div class="tag-2">Latest</div>
+                                <div class="price-box">
+                                    <span>{{audio.category}}</span>
+
+                                </div>
+                                <img class="d-block w-100" src="{{audio.blog_photo_1.url}}" alt="blog_photo_1" style="min-height: 200px; max-height: 200px;">
+                            </a>
+                            <div class="carbox-overlap-wrapper">
+                                <div class="overlap-box">
+                                    <div class="overlap-btns-area">
+                                        <div class="car-magnify-gallery">
+                                            <a href="img/car/car-1.jpg" class="overlap-btn">
+                                                <i class="fa fa-expand"></i>
+                                                <img class="hidden" src="img/car/car-1.jpg">
+                                            </a>
+                                            <a href="img/car/car-2.jpg" class="hidden">
+                                                <img class="hidden" src="img/car/car-2.jpg">
+                                            </a>
+                                            <a href="img/car/car-3.jpg" class="hidden">
+                                                <img class="hidden" src="img/car/car-3.jpg">
+                                            </a>
+                                            <a href="img/car/car-4.jpg" class="hidden">
+                                                <img class="hidden" src="img/car/car-4.jpg">
+                                            </a>
+                                            <a href="img/car/car-5.jpg" class="hidden">
+                                                <img class="hidden" src="img/car/car-5.jpg">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <h1 class="title">
+                                <a href="{% url 'audio_detail' audio.id %}">{{audio.msg_title}}</a>
+                            </h1>
+                            <div class="location">
+
+                            </div>
+                            <ul class="facilities-list clearfix">
+                              <li>{{audio.minister_name}}</li>
+                              <li>{{audio.created_date|date:"M d, Y" }}</li>
+
+                            </ul>
+                        </div>
+
+                        <figure >
+
+        <audio controls
+            src="{{audio.msg_link}}" controls="download">
+                Your browser does not support the audio element.
+        </audio>
+        <a href="https://drive.google.com/uc?authuser=0&id={{audio.id_link}}&export=download"
+        class="btn btn-lg btn-theme">
+        Download
+       </a>
+      </figure>
+                    </div>
+
+
+
+                </div>
+{% endfor%}
+
+
+
+
+            </div>
+            <div class="slick-btn">
+                <div class="slick-prev slick-arrow-buton sab-4">
+                    <i class="fa fa-angle-left"></i>
+                </div>
+                <div class="slick-next slick-arrow-buton sab-3">
+                    <i class="fa fa-angle-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
 
 
 <!-- Rent car end -->
