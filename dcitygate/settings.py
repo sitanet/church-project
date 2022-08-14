@@ -26,7 +26,7 @@ SECRET_KEY = 'new@6c(xp4p=klgen7pv13g+u9-piqv2c)q&4%sd4t53a(b9s='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['192.168.43.242']
+ALLOWED_HOSTS = ['hidden-crag-78820.herokuapp.com', 'thecitygatechurch.org', 'www.thecitygatechurch.com']
 
 
 # Application definition
