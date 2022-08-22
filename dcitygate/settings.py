@@ -27,7 +27,7 @@ SECRET_KEY = 'new@6c(xp4p=klgen7pv13g+u9-piqv2c)q&4%sd4t53a(b9s='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['thecitygatechurch.org']
+ALLOWED_HOSTS = ['www.thecitygatechurch.org']
 
 
 # Application definition
